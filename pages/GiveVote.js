@@ -59,7 +59,7 @@ export default function GiveVote() {
     const fetchPolls = async () => {
       try {
         if (!isLoading && !currentUser) {
-          router.push("/Login");
+          router.push("/");
         } else {
           const fetchUsernames = async () => {
             const usersRef = collection(DB, 'users');

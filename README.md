@@ -1,40 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Vote
 
-First, run the development server:
+VoteSystem is a full-stack web application designed to empower users to create, participate in, and manage polls and votes seamlessly. With a user-friendly interface built using Next.js and Tailwind CSS, users can effortlessly navigate through the platform to create new polls, cast their votes, and explore existing polls.
+
+## Features
+
+- Poll Creation: Users can easily create new polls, specifying the question and available options.
+- Voting: Seamless and intuitive interface for users to cast their votes on existing polls.
+- Search and Filter: Efficient search and filtering functionalities allow users to quickly find polls based on keywords or categories
+- Responsive Design: The frontend is designed using Next.js and Tailwind CSS, ensuring a responsive and visually appealing experience across devices.
+- Secure Backend: The backend is powered by Node.js and Firebase, providing a robust and secure infrastructure for data storage and retrieval.
+
+
+## Installation
+Run command in Root path
+
+Install all packages
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  npm i 
 ```
+Run project 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+  npm run dev
+```
+## Screenshots
+login 
+![Login](./image/login.png)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+register
+![Register](./image/register.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+home before login
+![home_before_login](./image/home_before_login.png)   
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+home after login
+![home_after_login](./image/home_after_login.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+create polls
+![create_polls](./image/createpolls.png)
 
-## Learn More
+update polls
+![update_polls](./image/updatepolls.png)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+history of vote you give to polls
+![history](./image/history.png)

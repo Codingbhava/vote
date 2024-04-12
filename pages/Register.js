@@ -58,7 +58,7 @@ const handleSignUp = async () => {
       email: email,
       createTime: Timestamp.now()
     });
-    //history.push("/");
+    history.push("/");
   } catch (error) {
     const errorCode = error.code;
     let errorMessage = error.message;

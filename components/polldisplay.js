@@ -71,8 +71,9 @@ const PollDisplay = ({ polls, onUpdate, onDelete }) => {
             </div>
             {/* Update Modal */}
             {selectedPoll && (
-                <ClickAwayListener onClickAway={()=>setSelectedPoll(null)}>
+                
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+                <ClickAwayListener onClickAway={()=>setSelectedPoll(null)}>
                     <div className="bg-me_background p-4 rounded-lg">
                         <h2 className="text-xl font-bold mb-4">Update Poll</h2>
                         <p className="text-red-500 text-xl font-semibold mb-2 flex items-center"><GoAlertFill className='mr-2'/> Remember you reset votes also by click update button</p>
@@ -100,8 +101,9 @@ const PollDisplay = ({ polls, onUpdate, onDelete }) => {
                         <button onClick={handleUpdateSubmit} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mr-2">Update</button>
                         <button onClick={() => setSelectedPoll(null)} className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Cancel</button>
                     </div>
+                    </ClickAwayListener>
                 </div>
-                </ClickAwayListener>
+                
             )}
             {/* Render RadarChart */}
             

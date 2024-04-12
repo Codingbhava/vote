@@ -181,11 +181,12 @@ export default function Home() {
     setShowAutocomplete(false);
   };
   return (
-    <>
+    <>{
+      isLoading  ? (<Loading/>):(
+        <>
       {!currentUser ? (
         <>
-          {
-            isLoading || (!isLoading && !!currentUser) ? (<Loading/>):(
+          
               <div className="bg-gray-900 h-screen w-full flex flex-col">
         <Header data={usernames} searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleAutocompleteSelect={handleAutocompleteSelect} setShowAutocomplete={setShowAutocomplete} showAutocomplete={showAutocomplete}/>
           <div className="w-full  h-full  p-4  overflow-y-auto">
@@ -219,14 +220,12 @@ export default function Home() {
           </div>
           <p className="text-red-400 lg:text-xl md:text-xl text-xs font-semibold mb-2 flex items-center p-4"><GoAlertFill className='mr-2'/> For Create Polls and Give vote to other , so Login First</p>
           
-        </div>)
-          }
+        </div>
         </>
         
       ) : (
         <>
-          {
-            isLoading || (!isLoading && !!currentUser) ? (<Loading/>):(
+          
         <div className="bg-gray-900 h-screen w-full flex flex-col">
           <Header data={usernames} searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleAutocompleteSelect={handleAutocompleteSelect} setShowAutocomplete={setShowAutocomplete} showAutocomplete={showAutocomplete}/>
           <div className="w-full  h-full  p-4  overflow-y-auto">
@@ -277,9 +276,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-            )}
+            
             </>
       )}
+      </>
+      )}
     </>
+      
   );
 }

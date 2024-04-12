@@ -21,7 +21,7 @@ const SetVote = () => {
         const fetchData = async () => {
             try {
                 if (!isLoading && !currentUser) {
-                    router.push("/Login");
+                    router.push("/");
                 } else {
                     const userDocPollsRef = doc(DB, "polls", currentUser.id);
                     const unsubscribe = onSnapshot(userDocPollsRef, (doc) => {
